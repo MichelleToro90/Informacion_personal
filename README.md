@@ -1,31 +1,42 @@
 # Informacion_personal
 TAREA UEA S15
-📝 Diccionario en Python — Ejemplo Práctico
+📝 Diccionario de Personas en Python — Programa Interactivo
 
-Este proyecto muestra cómo trabajar con diccionarios en Python, realizando operaciones básicas como crear, acceder, modificar, verificar y eliminar claves, y finalmente mostrando la información de manera segmentada y legible.
+Este proyecto muestra cómo trabajar con diccionarios en Python, aplicados a varias personas.
+El programa permite consultar datos de cada persona individualmente escribiendo "persona 1", "persona 2", etc., y cuenta con manejo de errores y opción de salida.
 
-Características
+📌 Características
 
-Crear un diccionario con información personal ficticia.
+Crear una lista con 5 diccionarios que representan personas.
 
-Acceder y modificar un valor existente (ciudad).
+Modificar y agregar datos automáticamente:
 
-Agregar nuevas claves y valores (cargo, telefono).
+Cambiar la ciudad a "Guayaquil".
 
-Verificar si existe una clave antes de agregarla.
+Agregar "cargo".
 
-Eliminar una clave innecesaria (edad).
+Verificar y agregar "telefono".
 
-Imprimir el diccionario final segmentado para mayor legibilidad.
+Eliminar la clave "edad".
+
+Consultar personas una por una usando "persona número".
+
+Mensajes de error si el formato es incorrecto o el número no existe.
+
+Opción de repetir entradas hasta que el usuario escriba "salir".
 
 🚀 Cómo ejecutar
 
-Guarda el archivo con extensión .py, por ejemplo:
+Guarda el archivo como:
 
-diccionario.py
+personas.py
 
 
-Abre la terminal o consola en la carpeta donde guardaste el archivo.
+Abre una terminal en la carpeta donde guardaste el archivo.
+
+Ejecuta con:
+
+python personas.py
 
 Ejecuta el programa con:
 
@@ -44,3 +55,11 @@ Profesion: Ingeniera Civil
 Cargo: Gerente de Proyectos
 
 Telefono: 0999999999
+
+Escribe 'persona 1', 'persona 2', ..., o 'salir' para terminar: persona 6
+
+⚠️ Número inválido. Solo hay 5 personas.
+
+Escribe 'persona 1', 'persona 2', ..., o 'salir' para terminar: salir
+
+👋 Programa finalizado. ¡Hasta luego!
