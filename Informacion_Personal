@@ -1,0 +1,25 @@
+# 1. Crear un diccionario con información ficticia
+informacion_personal = {
+    "nombre": "Laura Pérez",
+    "edad": 29,
+    "ciudad": "Quito",
+    "profesion": "Ingeniera Civil"
+}
+
+# 2. Acceder y modificar el valor de la clave "ciudad"
+informacion_personal["ciudad"] = "Guayaquil"
+
+# 3. Agregar una nueva clave-valor
+informacion_personal["cargo"] = "Gerente de Proyectos"
+
+# 4. Verificar si la clave "telefono" existe, si no, agregarla
+if "telefono" not in informacion_personal:
+    informacion_personal["telefono"] = "0999999999"
+
+# 5. Eliminar la clave "edad"
+del informacion_personal["edad"]
+
+# 6. Imprimir el diccionario final de forma segmentada
+print("=== Diccionario Final ===")
+for clave, valor in informacion_personal.items():
+    print(f"{clave.capitalize()}: {valor}")
