@@ -1,25 +1,69 @@
-# 1. Crear un diccionario con información ficticia
-informacion_personal = {
-    "nombre": "Laura Pérez",
-    "edad": 29,
-    "ciudad": "Quito",
-    "profesion": "Ingeniera Civil"
-}
+# Lista de diccionarios con varias personas
+personas = [
+    {
+        "nombre": "Laura Pérez",
+        "edad": 29,
+        "ciudad": "Quito",
+        "profesion": "Ingeniera Civil"
+    },
+    {
+        "nombre": "Carlos Gómez",
+        "edad": 35,
+        "ciudad": "Cuenca",
+        "profesion": "Abogado"
+    },
+    {
+        "nombre": "Mariana Torres",
+        "edad": 41,
+        "ciudad": "Guayaquil",
+        "profesion": "Doctora"
+    },
+    {
+        "nombre": "Andrés Sánchez",
+        "edad": 27,
+        "ciudad": "Loja",
+        "profesion": "Profesor"
+    },
+    {
+        "nombre": "Sofía Ramírez",
+        "edad": 32,
+        "ciudad": "Ambato",
+        "profesion": "Arquitecta"
+    }
+]
 
-# 2. Acceder y modificar el valor de la clave "ciudad"
-informacion_personal["ciudad"] = "Guayaquil"
+# === OPERACIONES SOBRE CADA PERSONA ===
+for persona in personas:
+    persona["ciudad"] = "Guayaquil"       # Cambiar ciudad
+    persona["cargo"] = "Empleado"         # Agregar nuevo campo
+    if "telefono" not in persona:         # Verificar telefono
+        persona["telefono"] = "0999999999"
+    if "edad" in persona:                 # Eliminar edad
+        del persona["edad"]
 
-# 3. Agregar una nueva clave-valor
-informacion_personal["cargo"] = "Gerente de Proyectos"
+# === FUNCIÓN PARA MOSTRAR PERSONA INDIVIDUAL ===
+def mostrar_persona(numero):
+    if 1 <= numero <= len(personas):
+        persona = personas[numero - 1]  # -1 porque lista empieza en 0
+        print(f"\n=== Persona {numero} ===")
+        for clave, valor in persona.items():
+            print(f"{clave.capitalize()}: {valor}")
+    else:
+        print("⚠️ Número inválido. Solo hay 5 personas.")
 
-# 4. Verificar si la clave "telefono" existe, si no, agregarla
-if "telefono" not in informacion_personal:
-    informacion_personal["telefono"] = "0999999999"
+# === BUCLE INTERACTIVO ===
+while True:
+    opcion = input("\nEscribe 'persona 1', 'persona 2', ..., o 'salir' para terminar: ").lower()
 
-# 5. Eliminar la clave "edad"
-del informacion_personal["edad"]
+    if opcion == "salir":
+        print("👋 Programa finalizado. ¡Hasta luego!")
+        break
 
-# 6. Imprimir el diccionario final de forma segmentada
-print("=== Diccionario Final ===")
-for clave, valor in informacion_personal.items():
-    print(f"{clave.capitalize()}: {valor}")
+    if opcion.startswith("persona"):
+        try:
+            num = int(opcion.split()[1])  # tomar el número después de la palabra
+            mostrar_persona(num)
+        except:
+            print("❌ Formato inválido. Debes escribir: persona + número (ej: persona 3).")
+    else:
+        print("❌ Entrada no reconocida. Usa 'persona número' o 'salir'.")
