@@ -34,6 +34,7 @@ python diccionario.py
 📊 Ejemplo de salida
 
 === Diccionario Final ===
+
 Nombre: Laura Pérez
 
 Ciudad: Guayaquil
