@@ -35,7 +35,11 @@ python diccionario.py
 
 === Diccionario Final ===
 Nombre: Laura Pérez
+
 Ciudad: Guayaquil
+
 Profesion: Ingeniera Civil
+
 Cargo: Gerente de Proyectos
+
 Telefono: 0999999999
